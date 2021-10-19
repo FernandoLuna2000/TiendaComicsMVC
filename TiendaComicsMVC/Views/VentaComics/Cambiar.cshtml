@@ -1,0 +1,85 @@
+﻿@model TiendaComicsMVC.Models.Comic
+
+@{
+    //Layout = null;//Layout = null; Espacio que hace referencia a el diseño que se genero
+    ViewBag.Title = "PruebadeDiseño";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Cambiar</title>
+    </head>
+    <body>*@ @*formulario creado de manera manual para hacer el agregado de un nuevo elemento*@
+    <div>
+        <form action="/VentaComics/Cambiar" method="post">
+
+            @*Inicio del formulario*@
+
+            <label>
+                <br /><br />
+                <a> <b>ID:</b> </a>
+                <br />
+                <input type="number" name="id" value="@Model.id" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b> Numero de Episodio: </b></a>
+                <br />
+                <input type="number" name="numepisodio" value="@Model.numepisodio" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b> Nombre: </b></a>
+                <br />
+                <input type="text" name="nombre" value="@Model.nombre" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b> Tipo de comic: </b></a>
+                <br />
+                <input type="text" name="tipocomic" value="@Model.tipocomic" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b>Costo: </b></a>
+                <br />
+                <input type="text" name="costo" value="@Model.costo" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b>Editorial: </b></a>
+                <br />
+                <input type="text" name="editorial" value="@Model.editorial" />
+            </label>
+            <br /><br />
+
+            <label>
+                <a><b>Foto: </b></a>
+                <br />
+                <input type="text" name="foto" value="@Model.foto" />
+            </label>
+            <br />
+            <br />
+
+            <input type="submit" value="Aceptar cambios" />
+
+            <br /><br />
+            <div>
+                <b>
+                    @Html.ActionLink("Regresar", "Listar")
+                </b>
+            </div>
+            @*Fin del formulario*@
+        </form>
+    </div>
+    @*</body>
+        </html>*@

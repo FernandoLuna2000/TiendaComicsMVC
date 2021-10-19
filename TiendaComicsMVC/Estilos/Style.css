@@ -1,0 +1,78 @@
+﻿body {
+    background-image: url('../Imagenes/fondo 2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    border-bottom: 5px solid black;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background: #dd2200;
+    height: 100%;
+    width: 100%;
+    font-size: initial;
+}
+
+.bg-custome {
+    background-color: #eec0c6;
+}
+
+li {
+    flex-grow: 1
+}
+
+b {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+th, p, h4 { /*Etiqueta p que en cualquier texto o título tendrá el color blanco*/
+    color: black;
+}
+
+.imagenes { /*Esta clase es para ponerle tamaño a las imágenes que tengan esta clase*/
+    height: 300px;
+    width: 550px;
+}
+
+.logo { /*clase logo para ponerle tamaño solo al logo de The Top Comics*/
+    height: 100px;
+    width: 100px;
+}
+
+.imagenesMvsD { /* Esta clase es para ponerle tamaño a las imágenes que tengan esta clase que son las de la pagina de Marvel vs DC*/
+    height: 300px;
+    width: 900px;
+}
+
+.imagen {
+    height: 300px;
+    width: 350px;
+}
+
+
+footer { /*Se le da un estilo a la cabecera o footer*/
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    color: black;
+}
+
+.cabecera { /*Se le da una estilo a la cabecera */
+    height: auto;
+    margin: 10px;
+    background-color: #ff2f00;
+}
+
+.navegacion { /*Se le da un estilo a la navegación donde estan las paginas*/
+    background-color: #ffd800;
+    width: auto;
+}

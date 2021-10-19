@@ -1,0 +1,119 @@
+﻿@model TiendaComicsMVC.Models.Comic
+
+@{
+    //Layout = null; Espacio que hace referencia a el diseño que se genero
+    ViewBag.Title = "PruebadeDiseño";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Alta</title>
+    </head>*@
+@*<body>*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4><b>¡Agrega un Nuevo Comic!</b></h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <br />
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.id, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <b>ID:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+            <div class="col-md-10">
+                @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.id, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.numepisodio, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Numero de Episodio del comic:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.numepisodio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.numepisodio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Nombre del Comic:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.tipocomic, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Tipo de Comic:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.tipocomic, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tipocomic, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.costo, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Costo:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.costo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.costo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <p></p>
+        @*@Html.LabelFor(model => model.editorial, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Editorial:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.editorial, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.editorial, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.foto, htmlAttributes: new { @class = "control-label col-md-2" })*@
+        <b>Foto del Comic:</b>@*Se comenta o se elimina los campos generados por HTMLHELPERS dando un estilo propio, en este caso solo se ocupo para los nombres*@
+        <div class="col-md-10">
+            @*Ayuda de un htmlhelper que permite recuperar y visualizar la informacion de la base de datos de manera automatica*@
+            @Html.EditorFor(model => model.foto, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.foto, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <b>
+                <input type="submit" value="Crear Comic" />
+            </b>
+        </div>
+    </div>
+</div>
+}
+<br />
+<br />
+<div>
+    <b>
+        <a>
+            @Html.ActionLink("Regresar", "Listar")
+        </a>
+    </b>
+</div>
+@*</body>
+    </html>*@

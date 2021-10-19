@@ -1,0 +1,83 @@
+﻿@model IEnumerable<TiendaComicsMVC.Models.Comic>
+
+@{
+    //Layout = null;
+    ViewBag.Title = "PruebadeDiseño";
+    Layout = "~/Views/Shared/_Principal.cshtml";
+}
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Listar</title>
+    </head>*@
+@*<body>*@
+@*<p>
+        @Html.ActionLink("¡Agrega un Comic Nuevo!", "Alta")
+    </p>*@@*Lista de informacion echa con HTMLHELPERS*@
+    <table class="table">
+        <tr>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.numepisodio)*@
+                <b>Numero de Episodio del Comic</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.nombre)*@
+                <b>Nombre del Comic</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.tipocomic)*@
+                <b>Tipo de Comic</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.costo)*@
+                <b>Precio del Comic en $</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.editorial)*@
+                <b>Editorial</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            <th align="center">
+                @*@Html.DisplayNameFor(model => model.foto)*@
+                <b>Foto</b>@*apartado de nombre echo de manera manual*@
+            </th>
+            @*<th align="center">
+
+                </th>*@
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="center">
+                    <b>@Html.DisplayFor(modelItem => item.numepisodio)</b>
+                </td>
+                <td align="center">
+                    <b>@Html.DisplayFor(modelItem => item.nombre)</b>
+                </td>
+                <td align="center">
+                    <b> @Html.DisplayFor(modelItem => item.tipocomic)</b>
+                </td>
+                <td align="center">
+                    <b> @Html.DisplayFor(modelItem => item.costo)</b>
+                </td>
+                <td align="center">
+                    <b>@Html.DisplayFor(modelItem => item.editorial)</b>
+                </td>
+                <td align="center">
+                    <img src=@("/Imagenes/"+@Html.DisplayFor(modelItem => item.foto)) width="150" height="200" />
+                </td>
+                <td align="center">
+                    <b> @Html.ActionLink("Editar Comic", "Cambiar", new { id = @Html.DisplayFor(modelItem => item.id) })</b>
+                </td>
+                <td align="center">
+                    <b>@Html.ActionLink("Borrar Comic", "Borrar", new { id = @Html.DisplayFor(modelItem => item.id) })</b>
+                </td>
+            </tr>
+        }
+
+    </table>
+    @*</body>
+        </html>*@
